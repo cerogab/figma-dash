@@ -1,1 +1,1 @@
-# figma-dash
+# figma-dash-app
