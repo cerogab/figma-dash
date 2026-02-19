@@ -1,0 +1,220 @@
+{
+  "version": "1.0.2",
+  "metadata": {
+    "name": "PulseCRM Design System",
+    "description": "Figma Variables for PulseCRM iOS app — import via Variables JSON Import plugin"
+  },
+  "collections": [
+    {
+      "name": "PulseCRM/Colors",
+      "modes": [
+        {
+          "name": "Light",
+          "variables": [
+            {
+              "name": "Colors/Primary",
+              "type": "color",
+              "value": { "r": 108, "g": 99, "b": 255, "a": 1 }
+            },
+            {
+              "name": "Colors/Primary Light 10",
+              "type": "color",
+              "value": { "r": 108, "g": 99, "b": 255, "a": 0.1 }
+            },
+            {
+              "name": "Colors/Primary Light 15",
+              "type": "color",
+              "value": { "r": 108, "g": 99, "b": 255, "a": 0.15 }
+            },
+            {
+              "name": "Colors/Primary Light 20",
+              "type": "color",
+              "value": { "r": 108, "g": 99, "b": 255, "a": 0.2 }
+            },
+            {
+              "name": "Colors/Primary Light 30",
+              "type": "color",
+              "value": { "r": 108, "g": 99, "b": 255, "a": 0.3 }
+            },
+            {
+              "name": "Colors/Background",
+              "type": "color",
+              "value": { "r": 245, "g": 245, "b": 247, "a": 1 }
+            },
+            {
+              "name": "Colors/Card",
+              "type": "color",
+              "value": { "r": 255, "g": 255, "b": 255, "a": 1 }
+            },
+            {
+              "name": "Colors/Text Primary",
+              "type": "color",
+              "value": { "r": 26, "g": 26, "b": 46, "a": 1 }
+            },
+            {
+              "name": "Colors/Text Secondary",
+              "type": "color",
+              "value": { "r": 107, "g": 114, "b": 128, "a": 1 }
+            },
+            {
+              "name": "Colors/Success",
+              "type": "color",
+              "value": { "r": 52, "g": 199, "b": 89, "a": 1 }
+            },
+            {
+              "name": "Colors/Success Light 10",
+              "type": "color",
+              "value": { "r": 52, "g": 199, "b": 89, "a": 0.1 }
+            },
+            {
+              "name": "Colors/Warning",
+              "type": "color",
+              "value": { "r": 255, "g": 149, "b": 0, "a": 1 }
+            },
+            {
+              "name": "Colors/Error",
+              "type": "color",
+              "value": { "r": 255, "g": 59, "b": 48, "a": 1 }
+            },
+            {
+              "name": "Colors/Info Blue",
+              "type": "color",
+              "value": { "r": 0, "g": 122, "b": 255, "a": 1 }
+            },
+            {
+              "name": "Colors/White",
+              "type": "color",
+              "value": { "r": 255, "g": 255, "b": 255, "a": 1 }
+            },
+            {
+              "name": "Colors/Divider",
+              "type": "color",
+              "value": { "r": 229, "g": 231, "b": 235, "a": 1 }
+            },
+            {
+              "name": "Colors/Divider Half",
+              "type": "color",
+              "value": { "r": 229, "g": 231, "b": 235, "a": 0.5 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PulseCRM/Spacing",
+      "modes": [
+        {
+          "name": "Default",
+          "variables": [
+            { "name": "Spacing/xxs", "type": "number", "value": 4 },
+            { "name": "Spacing/xs", "type": "number", "value": 8 },
+            { "name": "Spacing/sm", "type": "number", "value": 12 },
+            { "name": "Spacing/md", "type": "number", "value": 16 },
+            { "name": "Spacing/lg", "type": "number", "value": 24 },
+            { "name": "Spacing/xl", "type": "number", "value": 32 },
+            { "name": "Spacing/xxl", "type": "number", "value": 48 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PulseCRM/Radius",
+      "modes": [
+        {
+          "name": "Default",
+          "variables": [
+            { "name": "Radius/handleBar", "type": "number", "value": 3 },
+            { "name": "Radius/chartBar", "type": "number", "value": 6 },
+            { "name": "Radius/badge", "type": "number", "value": 8 },
+            { "name": "Radius/segmentedControl", "type": "number", "value": 8 },
+            { "name": "Radius/input", "type": "number", "value": 10 },
+            { "name": "Radius/button", "type": "number", "value": 12 },
+            { "name": "Radius/card", "type": "number", "value": 16 },
+            { "name": "Radius/appLogo", "type": "number", "value": 16 },
+            { "name": "Radius/pill", "type": "number", "value": 20 },
+            { "name": "Radius/circle", "type": "number", "value": 9999 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PulseCRM/Sizing",
+      "modes": [
+        {
+          "name": "Default",
+          "variables": [
+            { "name": "Sizing/screenWidth", "type": "number", "value": 393 },
+            { "name": "Sizing/screenHeight", "type": "number", "value": 852 },
+            { "name": "Sizing/buttonHeight", "type": "number", "value": 50 },
+            { "name": "Sizing/inputHeight", "type": "number", "value": 44 },
+            { "name": "Sizing/searchBarHeight", "type": "number", "value": 36 },
+            { "name": "Sizing/segmentedControlHeight", "type": "number", "value": 36 },
+            { "name": "Sizing/iconCircle", "type": "number", "value": 56 },
+            { "name": "Sizing/actionButton", "type": "number", "value": 40 },
+            { "name": "Sizing/fab", "type": "number", "value": 56 },
+            { "name": "Sizing/appLogo", "type": "number", "value": 72 },
+            { "name": "Sizing/tabBarHeight", "type": "number", "value": 83 },
+            { "name": "Sizing/chartHeight", "type": "number", "value": 200 },
+            { "name": "Sizing/notesHeight", "type": "number", "value": 100 },
+            { "name": "Sizing/handleBarWidth", "type": "number", "value": 36 },
+            { "name": "Sizing/handleBarHeight", "type": "number", "value": 5 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PulseCRM/Typography",
+      "modes": [
+        {
+          "name": "Default",
+          "variables": [
+            { "name": "FontSize/largeTitle", "type": "number", "value": 34 },
+            { "name": "FontSize/greeting", "type": "number", "value": 28 },
+            { "name": "FontSize/title2", "type": "number", "value": 22 },
+            { "name": "FontSize/headline", "type": "number", "value": 17 },
+            { "name": "FontSize/subheadline", "type": "number", "value": 15 },
+            { "name": "FontSize/segmentLabel", "type": "number", "value": 14 },
+            { "name": "FontSize/chartSubtitle", "type": "number", "value": 13 },
+            { "name": "FontSize/caption", "type": "number", "value": 12 },
+            { "name": "FontSize/tabLabel", "type": "number", "value": 10 },
+            { "name": "LineHeight/largeTitle", "type": "number", "value": 41 },
+            { "name": "LineHeight/title2", "type": "number", "value": 28 },
+            { "name": "LineHeight/headline", "type": "number", "value": 22 },
+            { "name": "LineHeight/subheadline", "type": "number", "value": 20 },
+            { "name": "LineHeight/caption", "type": "number", "value": 16 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PulseCRM/IconSizes",
+      "modes": [
+        {
+          "name": "Default",
+          "variables": [
+            { "name": "IconSize/tab", "type": "number", "value": 24 },
+            { "name": "IconSize/cardIcon", "type": "number", "value": 28 },
+            { "name": "IconSize/fab", "type": "number", "value": 24 },
+            { "name": "IconSize/biometric", "type": "number", "value": 22 },
+            { "name": "IconSize/action", "type": "number", "value": 18 },
+            { "name": "IconSize/search", "type": "number", "value": 16 },
+            { "name": "IconSize/dataDot", "type": "number", "value": 6 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PulseCRM/BorderWidth",
+      "modes": [
+        {
+          "name": "Default",
+          "variables": [
+            { "name": "BorderWidth/default", "type": "number", "value": 1 },
+            { "name": "BorderWidth/thin", "type": "number", "value": 0.5 },
+            { "name": "BorderWidth/chartLine", "type": "number", "value": 2 }
+          ]
+        }
+      ]
+    }
+  ]
+}

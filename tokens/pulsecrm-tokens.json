@@ -1,0 +1,490 @@
+{
+  "PulseCRM": {
+    "colors": {
+      "primary": {
+        "value": "#6C63FF",
+        "type": "color",
+        "description": "Main brand purple — buttons, icons, accents, tab tint, links"
+      },
+      "primaryLight": {
+        "value": "rgba(108, 99, 255, 0.1)",
+        "type": "color",
+        "description": "10% opacity primary — icon circle backgrounds, chip highlights"
+      },
+      "background": {
+        "value": "#F5F5F7",
+        "type": "color",
+        "description": "App background on every screen"
+      },
+      "card": {
+        "value": "#FFFFFF",
+        "type": "color",
+        "description": "Card and container fills"
+      },
+      "textPrimary": {
+        "value": "#1A1A2E",
+        "type": "color",
+        "description": "Headings, names, primary labels"
+      },
+      "textSecondary": {
+        "value": "#6B7280",
+        "type": "color",
+        "description": "Subtitles, descriptions, timestamps"
+      },
+      "success": {
+        "value": "#34C759",
+        "type": "color",
+        "description": "Converted badge, call button tint"
+      },
+      "warning": {
+        "value": "#FF9500",
+        "type": "color",
+        "description": "Contacted badge"
+      },
+      "error": {
+        "value": "#FF3B30",
+        "type": "color",
+        "description": "Lost badge, destructive actions, logout"
+      },
+      "infoBlue": {
+        "value": "#007AFF",
+        "type": "color",
+        "description": "Qualified badge"
+      },
+      "white": {
+        "value": "#FFFFFF",
+        "type": "color",
+        "description": "Button text on purple, card fills"
+      },
+      "divider": {
+        "value": "#E5E7EB",
+        "type": "color",
+        "description": "Separator lines, search bar background"
+      },
+      "successLight": {
+        "value": "rgba(52, 199, 89, 0.1)",
+        "type": "color",
+        "description": "Call button circle background"
+      },
+      "errorLight": {
+        "value": "rgba(255, 59, 48, 0.1)",
+        "type": "color",
+        "description": "Error state light background"
+      },
+      "primaryLight15": {
+        "value": "rgba(108, 99, 255, 0.15)",
+        "type": "color",
+        "description": "Avatar circle background (15% opacity)"
+      }
+    },
+    "spacing": {
+      "xxs": {
+        "value": "4",
+        "type": "spacing",
+        "description": "Extra extra small spacing"
+      },
+      "xs": {
+        "value": "8",
+        "type": "spacing",
+        "description": "Extra small spacing"
+      },
+      "sm": {
+        "value": "12",
+        "type": "spacing",
+        "description": "Small spacing"
+      },
+      "md": {
+        "value": "16",
+        "type": "spacing",
+        "description": "Medium spacing — card padding, horizontal margins"
+      },
+      "lg": {
+        "value": "24",
+        "type": "spacing",
+        "description": "Large spacing — section gaps"
+      },
+      "xl": {
+        "value": "32",
+        "type": "spacing",
+        "description": "Extra large spacing — login padding, major section gaps"
+      },
+      "xxl": {
+        "value": "48",
+        "type": "spacing",
+        "description": "Extra extra large spacing"
+      }
+    },
+    "borderRadius": {
+      "card": {
+        "value": "16",
+        "type": "borderRadius",
+        "description": "Cards and containers"
+      },
+      "button": {
+        "value": "12",
+        "type": "borderRadius",
+        "description": "Primary buttons"
+      },
+      "badge": {
+        "value": "8",
+        "type": "borderRadius",
+        "description": "Status badges, filter chips inactive"
+      },
+      "input": {
+        "value": "10",
+        "type": "borderRadius",
+        "description": "Text input fields, search bar"
+      },
+      "pill": {
+        "value": "20",
+        "type": "borderRadius",
+        "description": "Filter chips (pill shape)"
+      },
+      "circle": {
+        "value": "9999",
+        "type": "borderRadius",
+        "description": "Icon circles, avatar, FAB"
+      },
+      "handleBar": {
+        "value": "3",
+        "type": "borderRadius",
+        "description": "Sheet handle bar"
+      },
+      "chartBar": {
+        "value": "6",
+        "type": "borderRadius",
+        "description": "Chart bar top corners"
+      },
+      "segmentedControl": {
+        "value": "8",
+        "type": "borderRadius",
+        "description": "Time range segmented control container"
+      }
+    },
+    "sizing": {
+      "buttonHeight": {
+        "value": "50",
+        "type": "sizing",
+        "description": "Primary button height"
+      },
+      "inputHeight": {
+        "value": "44",
+        "type": "sizing",
+        "description": "Text field height"
+      },
+      "searchBarHeight": {
+        "value": "36",
+        "type": "sizing",
+        "description": "Search bar height"
+      },
+      "segmentedControlHeight": {
+        "value": "36",
+        "type": "sizing",
+        "description": "Time range picker height"
+      },
+      "iconCircle": {
+        "value": "56",
+        "type": "sizing",
+        "description": "Quick action card icon circle, avatar circle"
+      },
+      "actionButton": {
+        "value": "40",
+        "type": "sizing",
+        "description": "Call/email action button circles on contact cards"
+      },
+      "fab": {
+        "value": "56",
+        "type": "sizing",
+        "description": "Floating action button"
+      },
+      "appLogo": {
+        "value": "72",
+        "type": "sizing",
+        "description": "Login screen app logo"
+      },
+      "tabBarHeight": {
+        "value": "83",
+        "type": "sizing",
+        "description": "Tab bar height including safe area"
+      },
+      "chartHeight": {
+        "value": "200",
+        "type": "sizing",
+        "description": "Line chart and bar chart height"
+      },
+      "notesHeight": {
+        "value": "100",
+        "type": "sizing",
+        "description": "Notes text area minimum height"
+      },
+      "handleBar": {
+        "value": "36",
+        "type": "sizing",
+        "description": "Sheet handle bar width (5pt height)"
+      },
+      "screenWidth": {
+        "value": "393",
+        "type": "sizing",
+        "description": "iPhone 15 Pro screen width"
+      },
+      "screenHeight": {
+        "value": "852",
+        "type": "sizing",
+        "description": "iPhone 15 Pro screen height"
+      }
+    },
+    "borderWidth": {
+      "default": {
+        "value": "1",
+        "type": "borderWidth",
+        "description": "Input field borders, filter chip inactive border"
+      },
+      "thin": {
+        "value": "0.5",
+        "type": "borderWidth",
+        "description": "Tab bar top border, dividers"
+      },
+      "chartLine": {
+        "value": "2",
+        "type": "borderWidth",
+        "description": "Line chart stroke width, data dot border"
+      }
+    },
+    "fontFamilies": {
+      "default": {
+        "value": "SF Pro",
+        "type": "fontFamilies",
+        "description": "System font — all text"
+      }
+    },
+    "fontWeights": {
+      "regular": {
+        "value": "Regular",
+        "type": "fontWeights"
+      },
+      "medium": {
+        "value": "Medium",
+        "type": "fontWeights"
+      },
+      "semibold": {
+        "value": "Semi Bold",
+        "type": "fontWeights"
+      },
+      "bold": {
+        "value": "Bold",
+        "type": "fontWeights"
+      }
+    },
+    "fontSizes": {
+      "largeTitle": {
+        "value": "34",
+        "type": "fontSizes",
+        "description": "Login title, nav large titles"
+      },
+      "title2": {
+        "value": "22",
+        "type": "fontSizes",
+        "description": "Screen headings, greeting"
+      },
+      "greeting": {
+        "value": "28",
+        "type": "fontSizes",
+        "description": "Admin name on home screen"
+      },
+      "headline": {
+        "value": "17",
+        "type": "fontSizes",
+        "description": "Card titles, contact names, body text"
+      },
+      "subheadline": {
+        "value": "15",
+        "type": "fontSizes",
+        "description": "Card subtitles, company names"
+      },
+      "segmentLabel": {
+        "value": "14",
+        "type": "fontSizes",
+        "description": "Filter chip text, segmented control labels"
+      },
+      "chartSubtitle": {
+        "value": "13",
+        "type": "fontSizes",
+        "description": "Chart subtitles, trend text"
+      },
+      "caption": {
+        "value": "12",
+        "type": "fontSizes",
+        "description": "Badges, timestamps, field labels"
+      },
+      "tabLabel": {
+        "value": "10",
+        "type": "fontSizes",
+        "description": "Tab bar labels"
+      }
+    },
+    "lineHeights": {
+      "largeTitle": {
+        "value": "41",
+        "type": "lineHeights"
+      },
+      "title2": {
+        "value": "28",
+        "type": "lineHeights"
+      },
+      "headline": {
+        "value": "22",
+        "type": "lineHeights"
+      },
+      "subheadline": {
+        "value": "20",
+        "type": "lineHeights"
+      },
+      "caption": {
+        "value": "16",
+        "type": "lineHeights"
+      }
+    },
+    "typography": {
+      "largeTitle": {
+        "value": {
+          "fontFamily": "{PulseCRM.fontFamilies.default}",
+          "fontWeight": "{PulseCRM.fontWeights.bold}",
+          "fontSize": "{PulseCRM.fontSizes.largeTitle}",
+          "lineHeight": "{PulseCRM.lineHeights.largeTitle}"
+        },
+        "type": "typography",
+        "description": "Login title, navigation large titles"
+      },
+      "title2": {
+        "value": {
+          "fontFamily": "{PulseCRM.fontFamilies.default}",
+          "fontWeight": "{PulseCRM.fontWeights.semibold}",
+          "fontSize": "{PulseCRM.fontSizes.title2}",
+          "lineHeight": "{PulseCRM.lineHeights.title2}"
+        },
+        "type": "typography",
+        "description": "Screen headings, greeting line"
+      },
+      "headline": {
+        "value": {
+          "fontFamily": "{PulseCRM.fontFamilies.default}",
+          "fontWeight": "{PulseCRM.fontWeights.semibold}",
+          "fontSize": "{PulseCRM.fontSizes.headline}",
+          "lineHeight": "{PulseCRM.lineHeights.headline}"
+        },
+        "type": "typography",
+        "description": "Card titles, contact names, chart titles"
+      },
+      "body": {
+        "value": {
+          "fontFamily": "{PulseCRM.fontFamilies.default}",
+          "fontWeight": "{PulseCRM.fontWeights.regular}",
+          "fontSize": "{PulseCRM.fontSizes.headline}",
+          "lineHeight": "{PulseCRM.lineHeights.headline}"
+        },
+        "type": "typography",
+        "description": "Form fields, descriptions, menu row labels"
+      },
+      "subheadline": {
+        "value": {
+          "fontFamily": "{PulseCRM.fontFamilies.default}",
+          "fontWeight": "{PulseCRM.fontWeights.regular}",
+          "fontSize": "{PulseCRM.fontSizes.subheadline}",
+          "lineHeight": "{PulseCRM.lineHeights.subheadline}"
+        },
+        "type": "typography",
+        "description": "Card subtitles, company names, tagline"
+      },
+      "caption": {
+        "value": {
+          "fontFamily": "{PulseCRM.fontFamilies.default}",
+          "fontWeight": "{PulseCRM.fontWeights.medium}",
+          "fontSize": "{PulseCRM.fontSizes.caption}",
+          "lineHeight": "{PulseCRM.lineHeights.caption}"
+        },
+        "type": "typography",
+        "description": "Status badges, field labels, timestamps"
+      }
+    },
+    "boxShadow": {
+      "card": {
+        "value": {
+          "x": "0",
+          "y": "2",
+          "blur": "8",
+          "spread": "0",
+          "color": "rgba(0, 0, 0, 0.05)",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "Default card shadow — all cards, containers, quick action cards"
+      },
+      "elevated": {
+        "value": {
+          "x": "0",
+          "y": "4",
+          "blur": "12",
+          "spread": "0",
+          "color": "rgba(108, 99, 255, 0.2)",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "FAB and elevated purple buttons"
+      }
+    },
+    "opacity": {
+      "disabled": {
+        "value": "0.5",
+        "type": "opacity",
+        "description": "Disabled button state"
+      },
+      "placeholder": {
+        "value": "0.5",
+        "type": "opacity",
+        "description": "Text field placeholder opacity"
+      },
+      "searchBarFill": {
+        "value": "0.5",
+        "type": "opacity",
+        "description": "Search bar background fill opacity"
+      }
+    },
+    "iconSize": {
+      "tabIcon": {
+        "value": "24",
+        "type": "sizing",
+        "description": "Tab bar icons"
+      },
+      "cardIcon": {
+        "value": "28",
+        "type": "sizing",
+        "description": "Quick action card icons"
+      },
+      "fabIcon": {
+        "value": "24",
+        "type": "sizing",
+        "description": "FAB plus icon"
+      },
+      "biometricIcon": {
+        "value": "22",
+        "type": "sizing",
+        "description": "Face ID icon on login"
+      },
+      "actionIcon": {
+        "value": "18",
+        "type": "sizing",
+        "description": "Call/email icons on contact cards"
+      },
+      "searchIcon": {
+        "value": "16",
+        "type": "sizing",
+        "description": "Search bar magnifying glass"
+      },
+      "dataDot": {
+        "value": "6",
+        "type": "sizing",
+        "description": "Line chart data point circles"
+      }
+    }
+  }
+}

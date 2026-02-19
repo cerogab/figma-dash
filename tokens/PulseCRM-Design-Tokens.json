@@ -1,0 +1,366 @@
+{
+  "meta": {
+    "name": "PulseCRM Design System",
+    "version": "1.0.0",
+    "device": "iPhone 15 Pro",
+    "frameSize": { "width": 393, "height": 852 }
+  },
+
+  "colors": {
+    "primary": { "hex": "#6C63FF", "usage": "Buttons, icons, accents, tab tint, links" },
+    "primaryLight": { "hex": "#6C63FF", "opacity": 0.10, "usage": "Icon circle backgrounds, chip highlights" },
+    "background": { "hex": "#F5F5F7", "usage": "App background (every screen)" },
+    "card": { "hex": "#FFFFFF", "usage": "All card/container fills" },
+    "textPrimary": { "hex": "#1A1A2E", "usage": "Headings, names, primary labels" },
+    "textSecondary": { "hex": "#6B7280", "usage": "Subtitles, descriptions, timestamps" },
+    "success": { "hex": "#34C759", "usage": "Converted badge, call button tint" },
+    "warning": { "hex": "#FF9500", "usage": "Contacted badge" },
+    "error": { "hex": "#FF3B30", "usage": "Lost badge, destructive actions" },
+    "infoBlue": { "hex": "#007AFF", "usage": "Qualified badge" },
+    "white": { "hex": "#FFFFFF", "usage": "Button text on purple, card fills" },
+    "divider": { "hex": "#E5E7EB", "usage": "Separator lines" }
+  },
+
+  "typography": {
+    "fontFamily": "SF Pro, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif",
+    "styles": {
+      "largeTitle": { "size": 34, "weight": 700, "lineHeight": 41, "usage": "Login title" },
+      "title2": { "size": 22, "weight": 600, "lineHeight": 28, "usage": "Screen headings, greeting" },
+      "headline": { "size": 17, "weight": 600, "lineHeight": 22, "usage": "Card titles, contact names" },
+      "body": { "size": 17, "weight": 400, "lineHeight": 22, "usage": "Form fields, descriptions" },
+      "subheadline": { "size": 15, "weight": 400, "lineHeight": 20, "usage": "Card subtitles, company names" },
+      "caption1": { "size": 12, "weight": 500, "lineHeight": 16, "usage": "Badges, timestamps, labels" }
+    }
+  },
+
+  "spacing": {
+    "xxs": 4,
+    "xs": 8,
+    "sm": 12,
+    "md": 16,
+    "lg": 24,
+    "xl": 32,
+    "xxl": 48
+  },
+
+  "cornerRadius": {
+    "cards": 16,
+    "buttons": 12,
+    "badgesChips": 8,
+    "inputFields": 10,
+    "iconCircles": "50%"
+  },
+
+  "shadows": {
+    "card": { "color": "#000000", "opacity": 0.05, "x": 0, "y": 2, "blur": 8 },
+    "elevatedButton": { "color": "#6C63FF", "opacity": 0.20, "x": 0, "y": 4, "blur": 12 }
+  },
+
+  "components": {
+    "primaryButton": {
+      "width": "full",
+      "height": 50,
+      "fill": "#6C63FF",
+      "textSize": 17,
+      "textWeight": 600,
+      "textColor": "#FFFFFF",
+      "radius": 12,
+      "states": {
+        "default": { "opacity": 1.0 },
+        "pressed": { "darken": 0.10 },
+        "disabled": { "opacity": 0.50 }
+      }
+    },
+    "appTextField": {
+      "label": { "size": 12, "weight": 500, "color": "#6B7280", "gap": 4 },
+      "field": {
+        "width": "full",
+        "height": 44,
+        "fill": "#FFFFFF",
+        "borderWidth": 1,
+        "borderColor": "#E5E7EB",
+        "radius": 10,
+        "textSize": 17,
+        "textColor": "#1A1A2E",
+        "paddingLeft": 12,
+        "placeholderColor": "#6B7280",
+        "placeholderOpacity": 0.50
+      },
+      "states": {
+        "default": { "borderColor": "#E5E7EB" },
+        "focused": { "borderColor": "#6C63FF" },
+        "error": { "borderColor": "#FF3B30" }
+      }
+    },
+    "cardContainer": {
+      "fill": "#FFFFFF",
+      "radius": 16,
+      "padding": 16,
+      "shadow": { "color": "#000000", "opacity": 0.05, "x": 0, "y": 2, "blur": 8 },
+      "layout": "vertical"
+    },
+    "statusBadge": {
+      "paddingVertical": 6,
+      "paddingHorizontal": 10,
+      "radius": 8,
+      "textSize": 12,
+      "textWeight": 500,
+      "textColor": "#FFFFFF",
+      "variants": {
+        "new": { "fill": "#6C63FF" },
+        "contacted": { "fill": "#FF9500" },
+        "qualified": { "fill": "#007AFF" },
+        "converted": { "fill": "#34C759" },
+        "lost": { "fill": "#FF3B30" }
+      }
+    },
+    "quickActionCard": {
+      "fill": "#FFFFFF",
+      "radius": 16,
+      "paddingVertical": 24,
+      "paddingHorizontal": 16,
+      "align": "center",
+      "iconCircle": { "size": 56, "fill": "#6C63FF", "fillOpacity": 0.10, "iconSize": 28, "iconColor": "#6C63FF" },
+      "labelGap": 12,
+      "labelSize": 15,
+      "labelWeight": 500,
+      "labelColor": "#1A1A2E"
+    },
+    "contactCard": {
+      "base": "cardContainer",
+      "spacing": 12,
+      "row1": {
+        "layout": "horizontal",
+        "left": {
+          "name": { "size": 17, "weight": 600, "color": "#1A1A2E" },
+          "company": { "size": 15, "weight": 400, "color": "#6B7280" }
+        },
+        "right": "statusBadge"
+      },
+      "row2": {
+        "layout": "horizontal",
+        "spacing": 12,
+        "callButton": { "size": 40, "fill": "#34C759", "fillOpacity": 0.10, "iconSize": 18, "iconColor": "#34C759" },
+        "emailButton": { "size": 40, "fill": "#6C63FF", "fillOpacity": 0.10, "iconSize": 18, "iconColor": "#6C63FF" }
+      }
+    },
+    "filterChip": {
+      "paddingVertical": 8,
+      "paddingHorizontal": 16,
+      "radius": 20,
+      "textSize": 14,
+      "textWeight": 500,
+      "variants": {
+        "inactive": { "fill": "#FFFFFF", "borderWidth": 1, "borderColor": "#E5E7EB", "textColor": "#6B7280" },
+        "active": { "fill": "#6C63FF", "borderWidth": 0, "textColor": "#FFFFFF" }
+      }
+    },
+    "tabBar": {
+      "position": "fixedBottom",
+      "width": 393,
+      "height": 83,
+      "fill": "#FFFFFF",
+      "topBorder": { "width": 0.5, "color": "#E5E7EB" },
+      "tabs": [
+        { "icon": "house.fill", "label": "Home" },
+        { "icon": "person.2.fill", "label": "Contacts" },
+        { "icon": "chart.line.uptrend.xyaxis", "label": "Trends" },
+        { "icon": "gearshape.fill", "label": "Settings" }
+      ],
+      "iconSize": 24,
+      "labelSize": 10,
+      "labelWeight": 500,
+      "inactiveColor": "#6B7280",
+      "activeColor": "#6C63FF"
+    },
+    "searchBar": {
+      "width": "full",
+      "height": 36,
+      "fill": "#E5E7EB",
+      "fillOpacity": 0.50,
+      "radius": 10,
+      "iconSize": 16,
+      "iconColor": "#6B7280",
+      "iconPaddingLeft": 8,
+      "placeholderText": "Search contacts...",
+      "placeholderSize": 15,
+      "placeholderColor": "#6B7280"
+    }
+  },
+
+  "screens": {
+    "login": {
+      "frame": { "width": 393, "height": 852 },
+      "fill": "#F5F5F7",
+      "layout": "centeredVStack",
+      "spacing": 24,
+      "paddingHorizontal": 32,
+      "elements": [
+        { "type": "logo", "size": 72, "fill": "#6C63FF", "radius": 16 },
+        { "type": "text", "content": "PulseCRM", "size": 34, "weight": 700, "color": "#6C63FF" },
+        { "type": "text", "content": "Your business, amplified.", "size": 15, "weight": 400, "color": "#6B7280" },
+        { "type": "appTextField", "label": "Email", "placeholder": "admin@pulsecrm.com" },
+        { "type": "appTextField", "label": "Password", "placeholder": "Enter password", "obscured": true },
+        { "type": "primaryButton", "text": "Sign In" },
+        { "type": "dividerWithText", "text": "or" },
+        { "type": "biometricButton", "icon": "faceid", "text": "Sign in with Face ID" }
+      ]
+    },
+    "home": {
+      "frame": { "width": 393, "height": 852 },
+      "fill": "#F5F5F7",
+      "activeTab": "Home",
+      "elements": [
+        {
+          "type": "greetingSection",
+          "greeting": "Good Morning,",
+          "name": "Diego",
+          "subtitle": "Here's your business at a glance"
+        },
+        {
+          "type": "quickActionsGrid",
+          "columns": 2,
+          "gap": 16,
+          "cards": [
+            { "icon": "person.2.fill", "label": "CRM Contacts" },
+            { "icon": "chart.line.uptrend.xyaxis", "label": "Trends" },
+            { "icon": "plus.circle.fill", "label": "Add Client" }
+          ]
+        }
+      ]
+    },
+    "contacts": {
+      "frame": { "width": 393, "height": 852 },
+      "fill": "#F5F5F7",
+      "activeTab": "Contacts",
+      "elements": [
+        { "type": "navTitle", "text": "Contacts" },
+        { "type": "searchBar" },
+        {
+          "type": "filterChips",
+          "chips": ["All", "New", "Contacted", "Qualified", "Converted", "Lost"],
+          "activeChip": "All"
+        },
+        {
+          "type": "contactList",
+          "contacts": [
+            { "name": "Sarah Johnson", "company": "TechVision Inc", "status": "converted" },
+            { "name": "Michael Chen", "company": "DataFlow Systems", "status": "contacted" },
+            { "name": "Emily Rodriguez", "company": "GreenLeaf Marketing", "status": "new" },
+            { "name": "James Wilson", "company": "Atlas Consulting", "status": "qualified" },
+            { "name": "Priya Patel", "company": "NovaByte Labs", "status": "lost" },
+            { "name": "David Kim", "company": "Summit Digital", "status": "contacted" },
+            { "name": "Lisa Thompson", "company": "BrightPath Education", "status": "new" },
+            { "name": "Robert Martinez", "company": "ClearView Analytics", "status": "converted" }
+          ]
+        },
+        { "type": "fab", "icon": "plus", "size": 56 }
+      ]
+    },
+    "addClient": {
+      "frame": { "width": 393, "height": 700 },
+      "type": "sheet",
+      "topRadius": 16,
+      "elements": [
+        { "type": "handleBar", "width": 36, "height": 5, "radius": 3 },
+        { "type": "sheetHeader", "cancel": "Cancel", "title": "New Client", "save": "Save" },
+        {
+          "type": "form",
+          "fields": [
+            { "type": "appTextField", "label": "Full Name", "placeholder": "Enter name" },
+            { "type": "appTextField", "label": "Company", "placeholder": "Company name" },
+            { "type": "appTextField", "label": "Phone", "placeholder": "+1 (555) 000-0000" },
+            { "type": "appTextField", "label": "Email", "placeholder": "email@company.com" },
+            {
+              "type": "statusPicker",
+              "label": "Status",
+              "options": ["New", "Contacted", "Qualified", "Converted", "Lost"],
+              "activeOption": "New"
+            },
+            { "type": "textArea", "label": "Notes", "height": 100 }
+          ]
+        }
+      ]
+    },
+    "trends": {
+      "frame": { "width": 393, "height": 852 },
+      "fill": "#F5F5F7",
+      "activeTab": "Trends",
+      "elements": [
+        { "type": "navTitle", "text": "Trends" },
+        {
+          "type": "segmentedControl",
+          "segments": ["Week", "Month", "Quarter", "Year"],
+          "active": "Month"
+        },
+        {
+          "type": "chartCard",
+          "title": "Outreach Performance",
+          "subtitle": "Emails & calls over time",
+          "chartType": "line",
+          "chartHeight": 200,
+          "lineColor": "#6C63FF",
+          "areaGradient": { "from": "#6C63FF", "fromOpacity": 0.30, "to": "transparent" }
+        },
+        {
+          "type": "chartCard",
+          "title": "Conversion Trends",
+          "chartType": "bar",
+          "chartHeight": 200,
+          "barColor": "#6C63FF",
+          "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+        },
+        {
+          "type": "statCard",
+          "label": "Response Rate",
+          "value": "68%",
+          "trend": "+12% from last month",
+          "trendColor": "#34C759"
+        }
+      ]
+    },
+    "settings": {
+      "frame": { "width": 393, "height": 852 },
+      "fill": "#F5F5F7",
+      "activeTab": "Settings",
+      "elements": [
+        { "type": "navTitle", "text": "Settings" },
+        {
+          "type": "profileCard",
+          "avatar": { "size": 56, "fill": "#6C63FF", "fillOpacity": 0.15, "initials": "D" },
+          "name": "Diego",
+          "email": "admin@pulsecrm.com"
+        },
+        {
+          "type": "menuList",
+          "items": [
+            { "icon": "person.circle", "label": "Account" },
+            { "icon": "bell", "label": "Notifications" },
+            { "icon": "paintbrush", "label": "Appearance" }
+          ]
+        },
+        { "type": "logoutButton", "label": "Log Out", "color": "#FF3B30" },
+        { "type": "footer", "text": "PulseCRM v1.0.0" }
+      ]
+    }
+  },
+
+  "iconMap": {
+    "house.fill": "Home tab",
+    "person.2.fill": "Contacts tab",
+    "chart.line.uptrend.xyaxis": "Trends tab",
+    "gearshape.fill": "Settings tab",
+    "magnifyingglass": "Search",
+    "phone.fill": "Call button",
+    "envelope.fill": "Email button",
+    "plus": "Add client FAB",
+    "plus.circle.fill": "Add client card",
+    "faceid": "Face ID",
+    "chevron.right": "Navigation",
+    "arrow.up.right": "Up trend",
+    "rectangle.portrait.and.arrow.right": "Logout",
+    "person.circle": "Account",
+    "bell": "Notifications",
+    "paintbrush": "Appearance"
+  }
+}

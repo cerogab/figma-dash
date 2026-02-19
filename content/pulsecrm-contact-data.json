@@ -1,0 +1,82 @@
+[
+  {
+    "contactName": "Sarah Johnson",
+    "company": "TechVision Inc",
+    "phone": "+1 (555) 010-1001",
+    "email": "sarah@techvision.com",
+    "status": "Converted",
+    "statusColor": "#34C759",
+    "notes": "Signed Q4 contract",
+    "initials": "SJ"
+  },
+  {
+    "contactName": "Michael Chen",
+    "company": "DataFlow Systems",
+    "phone": "+1 (555) 010-2002",
+    "email": "m.chen@dataflow.io",
+    "status": "Contacted",
+    "statusColor": "#FF9500",
+    "notes": "Follow up next Tuesday",
+    "initials": "MC"
+  },
+  {
+    "contactName": "Emily Rodriguez",
+    "company": "GreenLeaf Marketing",
+    "phone": "+1 (555) 010-3003",
+    "email": "emily@greenleaf.co",
+    "status": "New",
+    "statusColor": "#6C63FF",
+    "notes": "Inbound lead from website",
+    "initials": "ER"
+  },
+  {
+    "contactName": "James Wilson",
+    "company": "Atlas Consulting",
+    "phone": "+1 (555) 010-4004",
+    "email": "jwilson@atlas.com",
+    "status": "Qualified",
+    "statusColor": "#007AFF",
+    "notes": "Demo scheduled for Friday",
+    "initials": "JW"
+  },
+  {
+    "contactName": "Priya Patel",
+    "company": "NovaByte Labs",
+    "phone": "+1 (555) 010-5005",
+    "email": "priya@novabyte.dev",
+    "status": "Lost",
+    "statusColor": "#FF3B30",
+    "notes": "Went with competitor",
+    "initials": "PP"
+  },
+  {
+    "contactName": "David Kim",
+    "company": "Summit Digital",
+    "phone": "+1 (555) 010-6006",
+    "email": "dkim@summit.digital",
+    "status": "Contacted",
+    "statusColor": "#FF9500",
+    "notes": "Sent proposal — awaiting response",
+    "initials": "DK"
+  },
+  {
+    "contactName": "Lisa Thompson",
+    "company": "BrightPath Education",
+    "phone": "+1 (555) 010-7007",
+    "email": "lisa@brightpath.edu",
+    "status": "New",
+    "statusColor": "#6C63FF",
+    "notes": "Met at conference",
+    "initials": "LT"
+  },
+  {
+    "contactName": "Robert Martinez",
+    "company": "ClearView Analytics",
+    "phone": "+1 (555) 010-8008",
+    "email": "rob@clearview.ai",
+    "status": "Converted",
+    "statusColor": "#34C759",
+    "notes": "Annual plan subscriber",
+    "initials": "RM"
+  }
+]
