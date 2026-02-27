@@ -1,0 +1,119 @@
+{
+  "screens": {
+    "login": {
+      "appName": "PulseCRM",
+      "tagline": "Your business, amplified.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "admin@pulsecrm.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter password",
+      "signInButton": "Sign In",
+      "dividerText": "or",
+      "biometricLabel": "Sign in with Face ID",
+      "biometricIcon": "faceid"
+    },
+    "home": {
+      "greetingLine1": "Good Morning,",
+      "greetingName": "Diego",
+      "subtitle": "Here's your business at a glance",
+      "quickActions": [
+        {
+          "label": "CRM Contacts",
+          "icon": "person.2.fill",
+          "navigateTo": "contactsTab"
+        },
+        {
+          "label": "Trends",
+          "icon": "chart.line.uptrend.xyaxis",
+          "navigateTo": "trendsTab"
+        },
+        {
+          "label": "Add Client",
+          "icon": "plus.circle.fill",
+          "navigateTo": "addClientSheet"
+        }
+      ]
+    },
+    "contacts": {
+      "navTitle": "Contacts",
+      "searchPlaceholder": "Search contacts...",
+      "searchIcon": "magnifyingglass",
+      "filterChips": ["All", "New", "Contacted", "Qualified", "Converted", "Lost"],
+      "fabIcon": "plus"
+    },
+    "addClient": {
+      "sheetTitle": "New Client",
+      "cancelButton": "Cancel",
+      "saveButton": "Save",
+      "fields": [
+        { "label": "Full Name", "placeholder": "Enter name", "keyboardType": "default" },
+        { "label": "Company", "placeholder": "Company name", "keyboardType": "default" },
+        { "label": "Phone", "placeholder": "+1 (555) 000-0000", "keyboardType": "phonePad" },
+        { "label": "Email", "placeholder": "email@company.com", "keyboardType": "emailAddress" }
+      ],
+      "statusLabel": "Status",
+      "statusOptions": ["New", "Contacted", "Qualified", "Converted", "Lost"],
+      "notesLabel": "Notes",
+      "notesPlaceholder": "Add any notes about this client..."
+    },
+    "analytics": {
+      "navTitle": "Trends",
+      "timeRangeOptions": ["Week", "Month", "Quarter", "Year"],
+      "outreachCard": {
+        "title": "Outreach Performance",
+        "subtitle": "Emails & calls over time",
+        "chartData": [
+          { "label": "Mon", "value": 12 },
+          { "label": "Tue", "value": 19 },
+          { "label": "Wed", "value": 8 },
+          { "label": "Thu", "value": 25 },
+          { "label": "Fri", "value": 32 },
+          { "label": "Sat", "value": 18 },
+          { "label": "Sun", "value": 22 }
+        ]
+      },
+      "conversionCard": {
+        "title": "Conversion Trends",
+        "chartData": [
+          { "label": "Jan", "value": 5 },
+          { "label": "Feb", "value": 8 },
+          { "label": "Mar", "value": 12 },
+          { "label": "Apr", "value": 9 },
+          { "label": "May", "value": 16 },
+          { "label": "Jun", "value": 14 }
+        ]
+      },
+      "responseRateCard": {
+        "label": "Response Rate",
+        "value": "68%",
+        "trendText": "+12% from last month",
+        "trendIcon": "arrow.up.right",
+        "trendColor": "#34C759"
+      }
+    },
+    "settings": {
+      "navTitle": "Settings",
+      "profile": {
+        "name": "Diego",
+        "email": "admin@pulsecrm.com",
+        "initials": "D"
+      },
+      "menuItems": [
+        { "label": "Account", "icon": "person.circle" },
+        { "label": "Notifications", "icon": "bell" },
+        { "label": "Appearance", "icon": "paintbrush" }
+      ],
+      "logoutLabel": "Log Out",
+      "logoutIcon": "rectangle.portrait.and.arrow.right",
+      "appVersion": "PulseCRM v1.0.0"
+    },
+    "tabBar": {
+      "tabs": [
+        { "label": "Home", "icon": "house.fill" },
+        { "label": "Contacts", "icon": "person.2.fill" },
+        { "label": "Trends", "icon": "chart.line.uptrend.xyaxis" },
+        { "label": "Settings", "icon": "gearshape.fill" }
+      ]
+    }
+  }
+}
