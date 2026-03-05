@@ -1,0 +1,174 @@
+# SSH Handbook
+
+SSH allows you to connect to an App from another machine or IDE.
+
+---
+
+## Overview
+
+You can use SSH to remotely access your Replit App's environment, run commands,
+transfer files, and connect from external editors like VS Code or JetBrains IDEs.
+
+--
+
+## Prerequisites
+
+- A Replit account (SSH is available on paid plans)
+- An SSH key pair on your local machine
+- Your public key added to your Replit account
+
+---
+
+## Generate an SSH Key Pair
+
+If you don't already have one:
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+This creates:
+- `~/.ssh/id_ed25519` (private key — keep secret)
+- `~/.ssh/id_ed25519.pub` (public key — upload to Replit)
+
+--
+
+## Add Your Public Key to Replit
+
+1. Copy your public key:
+   ```bash
+   cat ~/.ssh/id_ed25519.pub
+   ```
+2. Go to **Replit → Account → SSH Keys**
+3. Paste the key and save
+
+--
+
+## Connect to Your App
+
+```bash
+ssh <your-replit-username>@<your-app-slug>.repl.co
+```
+
+Or use the SSH connection string provided in the App's **Shell** tab under **SSH**.
+
+--
+
+## SSH Config (Recommended)
+
+Add an entry to `~/.ssh/config` for easier access:
+
+```
+Host replit-app
+    HostName <your-app-slug>.repl.co
+    User <your-replit-username>
+    IdentityFile ~/.ssh/id_ed25519
+    StrictHostKeyChecking no
+```
+
+Then connect with:
+
+```bash
+ssh replit-app
+```
+
+--
+
+## Connect from VS Code
+
+1. Install the **Remote - SSH** extension
+2. Open the Command Palette → **Remote-SSH: Connect to Host...**
+3. Enter your SSH connection string or select from `~/.ssh/config`
+4. VS Code opens a remote session in your Replit App environment
+
+--
+
+## Connect from JetBrains IDEs
+
+1. Go to **File → Remote Development → SSH**
+2. Enter the SSH connection details
+3. Select your project directory on the remote
+4. The IDE opens a remote development session
+
+--
+
+## File Transfer with SCP/SFTP
+
+### Upload a file to the App
+
+```bash
+scp local-file.txt replit-app:/home/runner/your-app/
+```
+
+### Download a file from the App
+
+```bash
+scp replit-app:/home/runner/your-app/data.json ./
+```
+
+### Interactive SFTP session
+
+```bash
+sftp replit-app
+sftp> put local-file.txt
+sftp> get remote-file.txt
+sftp> ls
+sftp> exit
+```
+
+--
+
+## Port Forwarding
+
+Forward a remote port to your local machine (useful for accessing services running in the App):
+
+```bash
+ssh -L 3000:localhost:3000 replit-app
+```
+
+This maps the App's port `3000` to your local `localhost:3000`.
+
+--
+
+## Running Commands Remotely
+
+Execute a single command without opening an interactive shell:
+
+```bash
+ssh replit-app "ls -la /home/runner/your-app/"
+ssh replit-app "python main.py"
+ssh replit-app "npm install && npm start"
+```
+
+--
+
+## Keep Alive
+
+Prevent SSH timeouts by adding to `~/.ssh/config`:
+
+```
+Host replit-app
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+```
+
+--
+
+## Troubleshooting
+
+| Issue                          | Solution                                                  |
+|--------------------------------|-----------------------------------------------------------|
+| `Permission denied (publickey)`| Ensure your public key is added to Replit account settings|
+| Connection timeout             | Check that the App is running and not in sleep mode       |
+| Host key verification failed   | Remove old entry: `ssh-keygen -R <host>`                  |
+| Broken pipe / dropped session  | Add `ServerAliveInterval` to SSH config                   |
+
+--
+
+## Security Tips
+
+- **Never share your private key** — only upload the `.pub` file
+- **Use Ed25519 keys** — stronger and faster than RSA
+- **Rotate keys periodically** — remove old keys from Replit settings
+- **Use SSH config** — avoid typing credentials repeatedly
+- **Disable password auth** — rely on key-based authentication only

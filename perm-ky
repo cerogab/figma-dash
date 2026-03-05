@@ -1,0 +1,168 @@
+# Replit Key-Value Storage
+
+Persistent key-value database provided by Replit, accessible from any App via HTTP requests or a client library.
+
+---
+
+## Environment
+
+Replit sets the environment variable `REPLIT_DB_URL` automatically in every App.  
+Use it as the base URL for all database operations.
+
+```
+REPLIT_DB_URL=https://kv.replit.com/v0/<token>
+```
+
+---
+
+## HTTP API
+
+All requests go to `$REPLIT_DB_URL`.
+
+### Set a key
+
+```
+POST $REPLIT_DB_URL
+Content-Type: application/x-www-form-urlencoded
+
+<key>=<value>
+```
+
+**curl example:**
+```bash
+curl $REPLIT_DB_URL -d 'mykey=myvalue'
+```
+
+### Get a key
+
+```
+GET $REPLIT_DB_URL/<key>
+```
+
+**curl example:**
+```bash
+curl $REPLIT_DB_URL/mykey
+# → myvalue
+```
+
+### Delete a key
+
+```
+DELETE $REPLIT_DB_URL/<key>
+```
+
+**curl example:**
+```bash
+curl -XDELETE $REPLIT_DB_URL/mykey
+```
+
+### List keys (by prefix)
+
+```
+GET $REPLIT_DB_URL?prefix=<prefix>
+GET $REPLIT_DB_URL?prefix=     # all keys
+```
+
+**curl example:**
+```bash
+curl "$REPLIT_DB_URL?prefix=my"
+# → mykey1\nmykey2
+```
+
+Returns newline-separated key names matching the prefix.
+
+---
+
+## Client Libraries
+
+### Python
+
+```python
+from replit import db
+
+# Set
+db["key"] = "value"
+db["user"] = {"name": "Diego", "role": "admin"}
+
+# Get
+print(db["key"])         # → value
+print(db["user"]["name"])  # → Diego
+
+# Delete
+del db["key"]
+
+# List keys
+print(list(db.keys()))
+
+# Prefix search
+matches = db.prefix("user")
+```
+
+### Node.js
+
+```javascript
+const Database = require("@replit/database");
+const db = new Database();
+
+// Set
+await db.set("key", "value");
+await db.set("user", { name: "Diego", role: "admin" });
+
+// Get
+const val = await db.get("key");       // → "value"
+const user = await db.get("user");     // → { name: "Diego", role: "admin" }
+
+// Delete
+await db.delete("key");
+
+// List keys
+const allKeys = await db.list();
+const filtered = await db.list("user"); // prefix search
+
+// Get all
+const everything = await db.getAll();
+```
+
+Install: `npm install @replit/database`
+
+### Go
+
+```go
+import "github.com/replit/database-go"
+
+db, _ := database.New()
+
+// Set
+db.Set("key", "value")
+
+// Get
+val, _ := db.Get("key")
+
+// Delete
+db.Delete("key")
+
+// List
+keys, _ := db.List("prefix")
+```
+
+---
+
+## Storage Notes
+
+| Detail              | Value                                    |
+|---------------------|------------------------------------------|
+| Max key size        | 768 bytes                                |
+| Max value size      | 16 MB                                    |
+| Storage per App     | 50 MB (free), 512 MB (paid)             |
+| Data persistence    | Survives reboots; tied to the Repl       |
+| Encoding            | Values stored as strings (JSON-serialize objects) |
+
+---
+
+## Tips
+
+- **Store JSON**: Serialize complex data as JSON strings for structured storage.
+- **Prefix namespacing**: Use prefixes like `user:`, `config:`, `cache:` to organize keys.
+- **Batch reads**: Use `list()` + loop instead of guessing key names.
+- **Backup**: Periodically export keys via the list/get API for external backup.
+- **REPLIT_DB_URL may rotate**: Always read from the env var at runtime; never hardcode the URL.
